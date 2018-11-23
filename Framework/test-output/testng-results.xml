@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44415" started-at="2018-11-20T10:20:14Z" finished-at="2018-11-20T10:20:59Z">
+  <suite name="Default suite" duration-ms="73040" started-at="2018-11-23T08:54:23Z" finished-at="2018-11-23T08:55:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44415" started-at="2018-11-20T10:20:14Z" finished-at="2018-11-20T10:20:59Z">
+    <test name="Default test" duration-ms="73040" started-at="2018-11-23T08:54:23Z" finished-at="2018-11-23T08:55:36Z">
       <class name="testCases.NewTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@396e2f39]" name="setUp" is-config="true" duration-ms="11749" started-at="2018-11-20T10:20:15Z" finished-at="2018-11-20T10:20:27Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@396e2f39]" name="setUp" is-config="true" duration-ms="33720" started-at="2018-11-23T08:54:24Z" finished-at="2018-11-23T08:54:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@396e2f39]" name="login" duration-ms="948" started-at="2018-11-20T10:20:27Z" data-provider="login" finished-at="2018-11-20T10:20:28Z">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@396e2f39]" name="login" duration-ms="5016" started-at="2018-11-23T08:54:58Z" data-provider="login" finished-at="2018-11-23T08:55:03Z">
           <params>
             <param index="0">
               <value>
@@ -27,15 +27,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@396e2f39]" name="clear" is-config="true" duration-ms="2114" started-at="2018-11-20T10:20:28Z" finished-at="2018-11-20T10:20:30Z">
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@396e2f39]" name="clear" is-config="true" duration-ms="2150" started-at="2018-11-23T08:55:03Z" finished-at="2018-11-23T08:55:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clear -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@396e2f39]" name="setUp" is-config="true" duration-ms="10824" started-at="2018-11-20T10:20:30Z" finished-at="2018-11-20T10:20:41Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@396e2f39]" name="setUp" is-config="true" duration-ms="13369" started-at="2018-11-23T08:55:05Z" finished-at="2018-11-23T08:55:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@396e2f39]" name="login" duration-ms="941" started-at="2018-11-20T10:20:41Z" data-provider="login" finished-at="2018-11-20T10:20:42Z">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@396e2f39]" name="login" duration-ms="948" started-at="2018-11-23T08:55:18Z" data-provider="login" finished-at="2018-11-23T08:55:19Z">
           <params>
             <param index="0">
               <value>
@@ -51,15 +51,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@396e2f39]" name="clear" is-config="true" duration-ms="2369" started-at="2018-11-20T10:20:42Z" finished-at="2018-11-20T10:20:44Z">
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@396e2f39]" name="clear" is-config="true" duration-ms="2334" started-at="2018-11-23T08:55:19Z" finished-at="2018-11-23T08:55:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clear -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@396e2f39]" name="setUp" is-config="true" duration-ms="11607" started-at="2018-11-20T10:20:44Z" finished-at="2018-11-20T10:20:56Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@396e2f39]" name="setUp" is-config="true" duration-ms="11637" started-at="2018-11-23T08:55:22Z" finished-at="2018-11-23T08:55:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@396e2f39]" name="login" duration-ms="872" started-at="2018-11-20T10:20:56Z" data-provider="login" finished-at="2018-11-20T10:20:57Z">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@396e2f39]" name="login" duration-ms="844" started-at="2018-11-23T08:55:33Z" data-provider="login" finished-at="2018-11-23T08:55:34Z">
           <params>
             <param index="0">
               <value>
@@ -75,7 +75,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@396e2f39]" name="clear" is-config="true" duration-ms="2380" started-at="2018-11-20T10:20:57Z" finished-at="2018-11-20T10:20:59Z">
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@396e2f39]" name="clear" is-config="true" duration-ms="2348" started-at="2018-11-23T08:55:34Z" finished-at="2018-11-23T08:55:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clear -->
