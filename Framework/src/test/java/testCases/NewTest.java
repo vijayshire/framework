@@ -48,7 +48,7 @@ public class NewTest{
 	public Object[][] login(){
 		
 		
-		Object[][] test = TestData.getExcelArray("C:\\Users\\vijay\\eclipse-workspace\\Framework\\src\\test\\java\\utility\\TestData.xlsx", "sheet1", this.getClass().getSimpleName());
+		Object[][] test = TestData.getExcelArray("C:\\Users\\vijay\\git\\framework\\Framework\\src\\test\\java\\utility\\TestData.xlsx", "sheet1", this.getClass().getSimpleName());
 		
 		return test;
 	}
