@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="44415" started-at="2018-11-20T10:20:14Z" finished-at="2018-11-20T10:20:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="44415" started-at="2018-11-20T10:20:14Z" finished-at="2018-11-20T10:20:59Z">
+      <class name="testCases.NewTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@396e2f39]" name="setUp" is-config="true" duration-ms="11749" started-at="2018-11-20T10:20:15Z" finished-at="2018-11-20T10:20:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@396e2f39]" name="login" duration-ms="948" started-at="2018-11-20T10:20:27Z" data-provider="login" finished-at="2018-11-20T10:20:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9158833338]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Successive1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@396e2f39]" name="clear" is-config="true" duration-ms="2114" started-at="2018-11-20T10:20:28Z" finished-at="2018-11-20T10:20:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clear -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@396e2f39]" name="setUp" is-config="true" duration-ms="10824" started-at="2018-11-20T10:20:30Z" finished-at="2018-11-20T10:20:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@396e2f39]" name="login" duration-ms="941" started-at="2018-11-20T10:20:41Z" data-provider="login" finished-at="2018-11-20T10:20:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9158833338]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Successive1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@396e2f39]" name="clear" is-config="true" duration-ms="2369" started-at="2018-11-20T10:20:42Z" finished-at="2018-11-20T10:20:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clear -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@396e2f39]" name="setUp" is-config="true" duration-ms="11607" started-at="2018-11-20T10:20:44Z" finished-at="2018-11-20T10:20:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@396e2f39]" name="login" duration-ms="872" started-at="2018-11-20T10:20:56Z" data-provider="login" finished-at="2018-11-20T10:20:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[JKFSJLF]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[FDKJFKDJF]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@396e2f39]" name="clear" is-config="true" duration-ms="2380" started-at="2018-11-20T10:20:57Z" finished-at="2018-11-20T10:20:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clear -->
+      </class> <!-- testCases.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
