@@ -1,9 +1,13 @@
 package commonClasses;
 
+import java.io.FileInputStream;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Login {
+	
+	FileInputStream objRepoFile = new FileInputStream("C:\\Users\\vijay\\git\\framework\\Framework\\objectRepo.properties");
 
 	public static boolean txtBoxUserName(WebDriver driver, String userName) {
 
