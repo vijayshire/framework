@@ -25,48 +25,43 @@ public class TestData {
 	public static XSSFSheet ExcelSheet;
 	public static XSSFRow row;
 	public static XSSFCell cell;
-	public static int i,j;
-	public static int totalNumbersOfRows=0;
-	public static int testColumns=0;
-	public static int startRowNum=0;
-	public static int endRowNum=0;
-	public static int rowCounter=0;
-	public static int testRows=0;
+	public static int i, j;
+	public static int totalNumbersOfRows = 0;
+	public static int testColumns = 0;
+	public static int startRowNum = 0;
+	public static int endRowNum = 0;
+	public static int rowCounter = 0;
+	public static int testRows = 0;
 
-	//Method to get Data from Excel and return the object array to Test Case
-	/*--------------------------------------------START OF getTestData Function--------------------------------------------------------------------------------*/	
-	public static Object [][] getTestData(String FilePath, String SheetName, String sTestCaseName) {
+	// Method to get Data from Excel and return the object array to Test Case
+	/*--------------------------------------------START OF getTestData Function--------------------------------------------------------------------------------*/
+	public static Object[][] getTestData(String FilePath, String SheetName, String sTestCaseName) {
 
-		String[][] tabArray = null; //Declaring String 2D array to store data from excel
-
+		String[][] tabArray = null; // Declaring String 2D array to store data from excel
 
 		try {
 
 			FileInputStream FileInput = new FileInputStream(FilePath);
 			ExcelBook = new XSSFWorkbook(FileInput);
 			ExcelSheet = ExcelBook.getSheet(SheetName);
-			totalNumbersOfRows = TestData.getTotalRows(ExcelSheet); //getting total rows used in excel
-			testRows=TestData.getTestRows(sTestCaseName); //getting only required number of rows to test current Test Case
-			tabArray = new String[testRows][testColumns-1]; //Dynamic initialisation of array
+			totalNumbersOfRows = TestData.getTotalRows(ExcelSheet); // getting total rows used in excel
+			testRows = TestData.getTestRows(sTestCaseName); // getting only required number of rows to test current Test
+															// Case
+			tabArray = new String[testRows][testColumns - 1]; // Dynamic initialisation of array
 
-			for(i=startRowNum;i<=endRowNum;i++) {
+			for (i = startRowNum; i <= endRowNum; i++) {
 
+				for (j = 0; j < testColumns - 1; j++) {
 
-				for( j=0;j<testColumns-1;j++) {
+					if (ExcelSheet.getRow(i).getCell(j + 1).getCellTypeEnum() == CellType.STRING) {
+						tabArray[rowCounter][j] = ExcelSheet.getRow(i).getCell(j + 1).getStringCellValue();
 
+					} else {
 
-					if(ExcelSheet.getRow(i).getCell(j+1).getCellTypeEnum()==CellType.STRING) 
-					{
-						tabArray[rowCounter][j]= ExcelSheet.getRow(i).getCell(j+1).getStringCellValue();
-
-					}
-					else {
-
-						tabArray[rowCounter][j]= String.valueOf(ExcelSheet.getRow(i).getCell(j+1).getNumericCellValue());
-
+						tabArray[rowCounter][j] = String
+								.valueOf(ExcelSheet.getRow(i).getCell(j + 1).getNumericCellValue());
 
 					}
-
 
 				}
 
@@ -75,7 +70,7 @@ public class TestData {
 
 		}
 
-		catch(Exception e) {
+		catch (Exception e) {
 
 			System.out.println(e);
 		}
@@ -85,32 +80,28 @@ public class TestData {
 
 	/*---------------------------------------------END OF getTestData FUNCTION---------------------------------------------------------------------------------------*/
 
-
-	/*-------------------------------------------- START OF getTestRows FUNCTION------------------------------------------------------------------------------------------------------------------*/	
+	/*-------------------------------------------- START OF getTestRows FUNCTION------------------------------------------------------------------------------------------------------------------*/
 
 	public static int getTestRows(String sTestCaseName) {
 
-		int rows=0;
+		int rows = 0;
 
-		for(int n=1;n<=totalNumbersOfRows;n++) {
+		for (int n = 1; n <= totalNumbersOfRows; n++) {
 
-
-			if(ExcelSheet.getRow(n).getCell(0).getStringCellValue().equals(sTestCaseName)) {
-
+			if (ExcelSheet.getRow(n).getCell(0).getStringCellValue().equals(sTestCaseName)) {
 
 				TestData.getColumnsCount(ExcelSheet.getRow(n));
-				if (startRowNum == 0)
-				{
+				if (startRowNum == 0) {
 
 					startRowNum = ExcelSheet.getRow(n).getCell(0).getRowIndex();
 					rows++;
-					endRowNum =  ExcelSheet.getRow(n).getCell(0).getRowIndex();
+					endRowNum = ExcelSheet.getRow(n).getCell(0).getRowIndex();
 				}
 
 				else {
 
 					rows++;
-					endRowNum =  ExcelSheet.getRow(n).getCell(0).getRowIndex();
+					endRowNum = ExcelSheet.getRow(n).getCell(0).getRowIndex();
 
 				}
 
@@ -122,12 +113,9 @@ public class TestData {
 
 	}
 
-	/*------------------------------------END OF getTestRows FUNCTION-------------------------------------------------------------------------------------------------------------------*/	
+	/*------------------------------------END OF getTestRows FUNCTION-------------------------------------------------------------------------------------------------------------------*/
 
-
-
-
-	/*-------------------------------------START OF getColumnsCount FUNCTION----------------------------------------------------------------------------------------------------------------------------------------------*/	
+	/*-------------------------------------START OF getColumnsCount FUNCTION----------------------------------------------------------------------------------------------------------------------------------------------*/
 	public static void getColumnsCount(XSSFRow xssfRow) {
 
 		List<Cell> cells = new ArrayList<>();
@@ -137,48 +125,40 @@ public class TestData {
 
 		}
 		for (int i = cells.size(); i >= 0; i--) {
-			System.out.println("Cells Size Before"+cells.size());
-			Cell cell = cells.get(i-1);
+
+			Cell cell = cells.get(i - 1);
 			if (cell.toString().trim().isEmpty()) {
-				cells.remove(i-1);
-				System.out.println("Cell Reomved");
+				cells.remove(i - 1);
+
 			} else {
 				testColumns = cells.size() > testColumns ? cells.size() : testColumns;
 				break;
 			}
 		}
 
-
 	}
-	/*-------------------------------------END OF getColumnsCount FUNCTION----------------------------------------------------------------------------------------------------------------------------------------------*/	
+	/*-------------------------------------END OF getColumnsCount FUNCTION----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-
-
-
-	/*-------------------------------------START OF getTotalRows FUNCTION----------------------------------------------------------------------------------------------------------------------------------------------*/	
-
+	/*-------------------------------------START OF getTotalRows FUNCTION----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 	public static int getTotalRows(XSSFSheet xssfSheet) {
 
 		Iterator<Row> rowIterator = xssfSheet.iterator();
 		while (rowIterator.hasNext()) {
 			Row row = rowIterator.next();
-			if(row.getCell(0).getStringCellValue().isEmpty()) {
+			if (row.getCell(0).getStringCellValue().isEmpty()) {
 
 				xssfSheet.removeRow(row);
-
 
 			}
 
 		}
-		return xssfSheet.getLastRowNum() ;
-
+		return xssfSheet.getLastRowNum();
 
 	}
 
-	/*-------------------------------------END OF getTotalRows FUNCTION----------------------------------------------------------------------------------------------------------------------------------------------*/	
+	/*-------------------------------------END OF getTotalRows FUNCTION----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 }
 
-/*-------------------------------------END OF TestData CLASS----------------------------------------------------------------------------------------------------------------------------------------------*/	
-
+/*-------------------------------------END OF TestData CLASS----------------------------------------------------------------------------------------------------------------------------------------------*/
