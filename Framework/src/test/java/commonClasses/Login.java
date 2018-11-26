@@ -1,26 +1,37 @@
 package commonClasses;
 
+import java.io.File;
 import java.io.FileInputStream;
-
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utility.*;
 
 public class Login {
 	
-	FileInputStream objRepoFile = new FileInputStream("C:\\Users\\vijay\\git\\framework\\Framework\\objectRepo.properties");
-
-	public static boolean txtBoxUserName(WebDriver driver, String userName) {
+	/*public static File objFile;
+	public static FileInputStream objRepo;
+	public static Properties propFile;*/
+	
+		public static boolean txtBoxUserName(WebDriver driver, String userName) {
+		
+			/*objFile = new File("objectRepo.properties");
+			objRepo = new FileInputStream(objFile);
+			propFile = new Properties();
+			propFile.load(objRepo);*/
 
 		try {
+			
+			if (driver.findElement(By.xpath(Config.propFile.getProperty("loginDialog"))).isEnabled()) {
 
-			if (driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]")).isEnabled()) {
-
-				driver.findElement(By.xpath("html/body/div[2]/div/div/button")).click();
+				driver.findElement(By.xpath(Config.propFile.getProperty("loginDialogClose"))).click();
 			}
 
-			driver.findElement(By.xpath(".//*[@id='container']/div/header/div[1]/div/div[3]/div[1]/div/a")).click();
+			driver.findElement(By.xpath(Config.propFile.getProperty("loginLink"))).click();
 
-			driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input"))
+			driver.findElement(By.xpath(Config.propFile.getProperty("loginUserName")))
 					.sendKeys(userName);
 
 			return true;
@@ -30,6 +41,7 @@ public class Login {
 		catch (Exception e) {
 
 			System.out.println("Error Occurred" + e);
+	        
 			return false;
 		}
 	}
@@ -38,7 +50,7 @@ public class Login {
 
 		try {
 
-			driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input"))
+			driver.findElement(By.xpath(Config.propFile.getProperty("loginPassowrd")))
 					.sendKeys(password);
 			return true;
 		}
@@ -55,7 +67,7 @@ public class Login {
 
 		try {
 
-			driver.findElement(By.xpath("html/body/div[2]/div/div/div/div/div[2]/div/form/div[3]/button")).click();
+			driver.findElement(By.xpath(Config.propFile.getProperty("loginBtn"))).click();
 			return true;
 		}
 
