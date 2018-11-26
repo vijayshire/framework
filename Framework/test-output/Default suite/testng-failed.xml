@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="clear"/>
-          <include name="login"/>
+          <include name="login" invocation-numbers="0"/>
         </methods>
       </class> <!-- testCases.NewTest -->
     </classes>
