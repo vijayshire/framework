@@ -26,7 +26,7 @@ public class Config extends AbstractWebDriverEventListener {
 	public static File repoFile;
 	public static int timeOut;
 	public static String url;
-	Reports objReports = new Reports();
+	public static  Reports objReports = new Reports();
 	public static WebDriver setup(String testName) {
 		testCaseName = testName;
 		Config.folderSetup(testCaseName);
@@ -106,7 +106,7 @@ public class Config extends AbstractWebDriverEventListener {
 	public void afterNavigateTo(String url, WebDriver driver1) {
 		
 		System.out.println("Navigated to :"+url);
-		objReports.log("Navigated To Url"+url);
+		objReports.log("Navigated To Url"+url,"PASS");
 	}
 	
 	public void beforeClickOn(WebElement element ,WebDriver driver1) {
@@ -117,13 +117,13 @@ public class Config extends AbstractWebDriverEventListener {
 	public void afterClickOn(WebElement element, WebDriver driver1) {
 		
 		System.out.println("Clicked on: "+element.toString());
-		objReports.log("Clicked on"+element.toString());
+		objReports.log("Clicked on"+element.toString(),"PASS");
 	}
 	
 	public void afterChangeValueOf(WebElement element, WebDriver driver1, CharSequence[] keysToSend) {
 		
 		System.out.println("Test Entered Successfully"+keysToSend.hashCode());
-		objReports.log("Value has been entered");
+		objReports.log("Value has been entered","PASS");
 	}
 	
 	public static void endSetup() {

@@ -16,8 +16,9 @@ public class Reports {
 		reporter = new ExtentHtmlReporter(testName);
 		reporter.loadXMLConfig("C:\\Users\\vijay\\git\\framework\\Framework\\src\\test\\java\\utility\\extent-config.xml");
 		report = new ExtentReports();
-		logger = report.createTest("My Test");
 		report.attachReporter(reporter);
+		logger = report.createTest("My Test");
+		
 		System.out.println("Report created at: " +testName);
 		}
 	catch(Exception e)	{
@@ -26,9 +27,9 @@ public class Reports {
 	}
 	}
 	
-	public void log(String status) {
+	public void log(String status, String a) {
 		
-		logger.log(Status.PASS, status);
+		logger.log(Status.valueOf(a), status);
 
 	}
     

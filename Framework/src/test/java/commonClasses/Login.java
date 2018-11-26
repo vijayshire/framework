@@ -11,6 +11,8 @@ import utility.*;
 
 public class Login {
 	
+	static Reports obj = new Reports();
+	
 	/*public static File objFile;
 	public static FileInputStream objRepo;
 	public static Properties propFile;*/
@@ -39,7 +41,7 @@ public class Login {
 		}
 
 		catch (Exception e) {
-
+			obj.log("Failed to enter username", "FAIL");
 			System.out.println("Error Occurred" + e);
 	        
 			return false;
