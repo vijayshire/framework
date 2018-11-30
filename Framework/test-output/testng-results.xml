@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="53573" started-at="2018-11-26T12:12:23Z" finished-at="2018-11-26T12:13:16Z">
+  <suite name="Default suite" duration-ms="50967" started-at="2018-11-29T09:30:28Z" finished-at="2018-11-29T09:31:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="53573" started-at="2018-11-26T12:12:23Z" finished-at="2018-11-26T12:13:16Z">
+    <test name="Default test" duration-ms="50967" started-at="2018-11-29T09:30:28Z" finished-at="2018-11-29T09:31:19Z">
       <class name="testCases.NewTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@2eda0940]" name="setUp" is-config="true" duration-ms="39058" started-at="2018-11-26T12:12:23Z" finished-at="2018-11-26T12:13:02Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.NewTest@2eda0940]" name="setUp" is-config="true" duration-ms="39935" started-at="2018-11-29T09:30:28Z" finished-at="2018-11-29T09:31:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@2eda0940]" name="login" duration-ms="778" started-at="2018-11-26T12:13:11Z" data-provider="login" finished-at="2018-11-26T12:13:12Z">
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.NewTest@2eda0940]" name="login" duration-ms="752" started-at="2018-11-29T09:31:14Z" data-provider="login" finished-at="2018-11-29T09:31:15Z">
           <params>
             <param index="0">
               <value>
@@ -67,7 +67,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@2eda0940]" name="clear" is-config="true" duration-ms="3928" started-at="2018-11-26T12:13:12Z" finished-at="2018-11-26T12:13:16Z">
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.NewTest@2eda0940]" name="clear" is-config="true" duration-ms="3866" started-at="2018-11-29T09:31:15Z" finished-at="2018-11-29T09:31:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clear -->
