@@ -60,6 +60,7 @@ public class Login {
 		catch (Exception e) {
 
 			System.out.println("Error Occurred" + e);
+			obj.log("Failed to enter Password", "FAIL");
 			return false;
 		}
 
@@ -75,6 +76,7 @@ public class Login {
 
 		catch (Exception e) {
 			System.out.println("Error Occurred" + e);
+			obj.log("Faile to click on Login button", "FAIL");
 			return false;
 
 		}

@@ -127,7 +127,7 @@ public class Config extends AbstractWebDriverEventListener {
 	
 	public static void endSetup() {
 		
-	   Reports.end();
+	 
 	}
 
 }

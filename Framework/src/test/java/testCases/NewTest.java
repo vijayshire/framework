@@ -18,7 +18,7 @@ public class NewTest {
 
 	WebDriver driver;
 
-	@BeforeClass
+	@BeforeMethod
 	public void setUp() {
     
 		driver = Config.setup(this.getClass().getSimpleName());
@@ -49,6 +49,6 @@ public class NewTest {
 
 	public void clear() {
         Config.endSetup();
-		driver.close();
+		driver.quit();
 	}
 }
