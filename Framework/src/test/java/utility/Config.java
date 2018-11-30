@@ -26,7 +26,7 @@ public class Config extends AbstractWebDriverEventListener {
 	public static File repoFile;
 	public static int timeOut;
 	public static String url;
-	public static  Reports objReports = new Reports();
+	public static Reports objReports = new Reports();
 	public static WebDriver setup(String testName) {
 		testCaseName = testName;
 		Config.folderSetup(testCaseName);
@@ -90,7 +90,6 @@ public class Config extends AbstractWebDriverEventListener {
 		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
 		timeOut = Integer.parseInt(propFile.getProperty("propTime"));
 		url = propFile.getProperty("propUrl");
-		
 		System.out.println("Url: "+url);
 		System.out.println("TiimeOut: "+timeOut);
 		driver.get(url);
