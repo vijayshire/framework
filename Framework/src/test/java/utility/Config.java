@@ -2,6 +2,7 @@ package utility;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Properties;
@@ -31,9 +32,9 @@ public class Config extends AbstractWebDriverEventListener {
 		testCaseName = testName;
 		Config.folderSetup(testCaseName);
 		Config.setObjRepo();
-		Reports.createReports(testpath+"\\"+testCaseName+".html");
+		Reports.createReports(testpath+"\\"+"extent.html",testCaseName);
 		Config.setBrowser();
-	    return driver;
+		return driver;
 
 	}
 
@@ -57,6 +58,8 @@ public class Config extends AbstractWebDriverEventListener {
 			System.out.println("Test Case Folder Created: "+outputFile);
 
 		}
+		
+		//testpath = outputFile.getAbsolutePath();
 
 	}
 
@@ -105,7 +108,12 @@ public class Config extends AbstractWebDriverEventListener {
 	public void afterNavigateTo(String url, WebDriver driver1) {
 		
 		System.out.println("Navigated to :"+url);
-		objReports.log("Navigated To Url"+url,"PASS");
+		try {
+			objReports.log("Navigated To Url"+url,"PASS");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void beforeClickOn(WebElement element ,WebDriver driver1) {
@@ -116,18 +124,28 @@ public class Config extends AbstractWebDriverEventListener {
 	public void afterClickOn(WebElement element, WebDriver driver1) {
 		
 		System.out.println("Clicked on: "+element.toString());
-		objReports.log("Clicked on"+element.toString(),"PASS");
+		try {
+			objReports.log("Clicked on"+element.toString(),"PASS");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void afterChangeValueOf(WebElement element, WebDriver driver1, CharSequence[] keysToSend) {
 		
 		System.out.println("Test Entered Successfully"+keysToSend.hashCode());
-		objReports.log("Value has been entered","PASS");
+		try {
+			objReports.log("Value has been entered","PASS");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public static void endSetup() {
 		
-	 
+	 Reports.end();
 	}
 
 }

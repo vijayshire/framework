@@ -16,7 +16,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utility.*;
 
-public class NewTest {
+public class CheCkLogin {
 
 	WebDriver driver;
 
@@ -33,6 +33,9 @@ public class NewTest {
 			Assert.assertEquals(Login.txtBoxUserName(driver, userName), true, "Error in inserting username");
 			Assert.assertEquals(Login.txtBoxPassword(driver, password), true, "Error in inserting Password");
 			Assert.assertEquals(Login.btnLogin(driver), true, "Error in clicking Login button");
+			
+			
+		
 		 
 	}
 
@@ -52,7 +55,7 @@ public class NewTest {
 	public void clear() {
 		
 		driver.quit();
-		
+		Config.endSetup();
 	}
 	
 	@AfterTest

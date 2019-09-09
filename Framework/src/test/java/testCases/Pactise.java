@@ -44,8 +44,11 @@ public class Pactise {
 	  
 	  HashSet<String> s1 = new HashSet<String>();  
 	  LinkedHashSet<String> s2 = new LinkedHashSet<String>();  
-	  TreeSet<String> s3 = new TreeSet<String>();  
+	  TreeSet<String> s3 = new TreeSet<String>();
 	  Map<Integer,String> hm = new HashMap<Integer,String>();
+	  
+	  
+	  
 	  
 	  al.add("Vijay");
 	  al.add("Rahul");
@@ -66,6 +69,7 @@ public class Pactise {
 	  System.out.println("Itearating Array List through ListIterator....\n");
 	  
 	  ListIterator<String> li = al.listIterator();
+	  
 	  
 	 
 	  // Elemetns using lis iterator
@@ -145,7 +149,7 @@ public class Pactise {
 	 
 	 hm.put(1, "Vijay");
 	 hm.put(2,"Ajay");
-	 hm.put(3, "Aniket");
+	 hm.put(3, "");
 	 System.out.println("Displaying HashMap using get method");
 	 System.out.println(hm.get(1));
 	
@@ -160,6 +164,14 @@ public class Pactise {
 		Map.Entry<Integer, String> entry = (Map.Entry<Integer, String>)itr1.next();
 		System.out.println(entry.getKey()+" " +entry.getValue());
 		
+	}
+	
+	
+	for(Map.Entry<Integer, String> m:hm.entrySet())
+		
+	{
+	
+		System.out.println(""+m.getKey());
 	}
 	 
 	q1.add("");

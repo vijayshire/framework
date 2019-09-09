@@ -77,7 +77,6 @@
 			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="G:/extentreports-java-3.1.5/extentreports-3.1.5.jar"/>
 	<classpathentry kind="lib" path="G:/extentreports-java-3.1.5/lib/bsh-2.0b4.jar"/>
 	<classpathentry kind="lib" path="G:/extentreports-java-3.1.5/lib/bson-3.3.0.jar"/>
@@ -93,5 +92,6 @@
 	<classpathentry kind="lib" path="G:/extentreports-java-3.1.5/lib/mongodb-driver-3.3.0.jar"/>
 	<classpathentry kind="lib" path="G:/extentreports-java-3.1.5/lib/mongodb-driver-core-3.3.0.jar"/>
 	<classpathentry kind="lib" path="G:/extentreports-java-3.1.5/lib/testng-6.9.10.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
