@@ -13,7 +13,9 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 
 public class CheckLoginFailure {
 	
@@ -26,7 +28,7 @@ public class CheckLoginFailure {
 			Assert.assertEquals(Login.txtBoxUserName(driver, userName), true, "Error in inserting username");
 			Assert.assertEquals(Login.txtBoxPassword(driver, password), true, "Error in inserting Password");
 			Assert.assertEquals(Login.btnLogin(driver), true, "Error in clicking Login button");
-			Assert.assertEquals(Login.verifyLoginFailed(driver), false, "User able to login with Invalid credential");
+			Assert.assertEquals(Login.chknLogin(driver), false, "User able to login with Invalid credential");
 			
 		}
 
@@ -40,14 +42,14 @@ public class CheckLoginFailure {
 
 		return test;
 	}
-  @BeforeMethod
+  @BeforeClass
   public void beforeMethod() {
 	  
 	  driver = Config.setup(this.getClass().getSimpleName());
 	  
   }
 
-  @AfterMethod
+  @AfterClass
   public void afterMethod() {
 	  
 	  driver.quit();

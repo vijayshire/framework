@@ -5,7 +5,7 @@
     <classes>
       <class name="testCases.CheCkLogin">
         <methods>
-          <include name="login"/>
+          <include name="login" invocation-numbers="0"/>
           <include name="flush"/>
           <include name="clear"/>
           <include name="setUp"/>

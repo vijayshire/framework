@@ -19,18 +19,16 @@ public class Reports {
 	public static void createReports(String testName, String testCaseName) {
 		try {
 			
-			File fl = new File(testName);
-		if(fl.exists()) {
-			reporter.setAppendExisting(true); }
 		
-		else {
-		reporter = new ExtentHtmlReporter(testName);
-		reporter.loadXMLConfig("C:\\Users\\vijay\\git\\framework\\Framework\\src\\test\\java\\utility\\extent-config.xml");
-		report = new ExtentReports();
-		report.attachReporter(reporter);}
-		logger = report.createTest(testCaseName);
-		
-		System.out.println("Report created at: " +testName);
+			reporter = new ExtentHtmlReporter(testName);
+            report = new ExtentReports();
+			report.attachReporter(reporter);
+			
+			reporter.loadXMLConfig("C:\\Users\\vijay\\git\\framework\\Framework\\src\\test\\java\\utility\\extent-config.xml");
+			logger = report.createTest(testCaseName);
+			
+			
+			
 		}
 	catch(Exception e)	{
 		
@@ -40,9 +38,16 @@ public class Reports {
 	
 	public void log(String status, String a) throws IOException {
 		
+		System.out.println("Log executed...........");
+		try {
 		logger.log(Status.valueOf(a),status, MediaEntityBuilder.createScreenCaptureFromPath("C:\\Users\\vijay\\Desktop\\IMG_20180312_154632.jpg").build());
-	
+		System.out.println("Llogged Successfully....");
+		}
 		
+		catch(Exception e) {
+			
+			System.out.println("Error in logging.............");
+		}
 	}
     
 	public static void end() {

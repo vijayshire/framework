@@ -90,8 +90,8 @@ public class Config extends AbstractWebDriverEventListener {
 		driver = new EventFiringWebDriver(driver1);
 		((EventFiringWebDriver) driver).register(eventListner);
 	    driver.manage().window().maximize();
+	    timeOut = Integer.parseInt(propFile.getProperty("propTime"));
 		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
-		timeOut = Integer.parseInt(propFile.getProperty("propTime"));
 		url = propFile.getProperty("propUrl");
 		System.out.println("Url: "+url);
 		System.out.println("TiimeOut: "+timeOut);
@@ -112,6 +112,7 @@ public class Config extends AbstractWebDriverEventListener {
 			objReports.log("Navigated To Url"+url,"PASS");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			System.out.println("Error has been occured re baba");
 			e.printStackTrace();
 		}
 	}

@@ -40,6 +40,7 @@ public class Login {
 
 				driver.findElement(By.xpath(Config.propFile.getProperty("loginDialogClose"))).click();
 			}
+			Thread.sleep(5000);
 
 			driver.findElement(By.xpath(Config.propFile.getProperty("loginLink"))).click();
 
@@ -81,6 +82,8 @@ public class Login {
 		try {
 
 			driver.findElement(By.xpath(Config.propFile.getProperty("loginBtn"))).click();
+			Thread.sleep(5000);
+			
 			return true;
 		}
 
@@ -90,32 +93,33 @@ public class Login {
 			return false;
 
 		}
+		
+			
+	}
+	public static boolean chknLogin(WebDriver driver) throws IOException{
+		try {
+			
+			String txt = driver.findElement(By.xpath(Config.propFile.getProperty("chkLogin"))).getText();
+			
+			String error1 = "Please enter valid Email ID/Mobile number";
+			String error2 = "Your username or password is incorrect";
+			if(txt.equalsIgnoreCase(error1) || txt.equalsIgnoreCase(error2))
+				return false;
+			else
+				return true;
+			
+						
+		}
+
+		catch (Exception e) {
+			System.out.println("Error Occurred" + e);
+			obj.log("Failed to validate", "FAIL");
+			return false;
+
+		}
+		
 	}
 	
-			public static boolean verifyLoginFailed(WebDriver driver) throws IOException {
-				
-				
-				try {
-				String result = driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/span[3]/span")).getText();
-				
-				if(result.equalsIgnoreCase("Please enter valid Email ID/Mobile number"))
-					{obj.log("Login Invalid Verified", "PASS");
-					return false;}
-				else {
-				obj.log("Test Case Failed...", "FAIL");
-				return true;
-				}
-				
-				}
-				
-				catch(Exception e) {
-					
-					System.out.println(e);
-					obj.log("Test Case Failed...", "FAIL");
-					return true;
-				}
-								
-			}
-				
+							
 	}
 

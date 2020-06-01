@@ -18,13 +18,13 @@ import utility.*;
 
 public class CheCkLogin {
 
-	WebDriver driver;
+	public WebDriver driver;
 
-	@BeforeMethod
+	@BeforeTest
 	public void setUp() {
     
 		driver = Config.setup(this.getClass().getSimpleName());
-	   
+	    
 	}
 
 	@Test(dataProvider = "login")
@@ -33,6 +33,7 @@ public class CheCkLogin {
 			Assert.assertEquals(Login.txtBoxUserName(driver, userName), true, "Error in inserting username");
 			Assert.assertEquals(Login.txtBoxPassword(driver, password), true, "Error in inserting Password");
 			Assert.assertEquals(Login.btnLogin(driver), true, "Error in clicking Login button");
+			//Assert.assertEquals(Login.btnLogin(driver), false, "Login failed");
 			
 			
 		
@@ -54,13 +55,14 @@ public class CheCkLogin {
 
 	public void clear() {
 		
-		driver.quit();
-		Config.endSetup();
+		
 	}
 	
 	@AfterTest
 	
 	public void flush() {
+		driver.quit();
+		Config.endSetup();
 		
 		
 	}

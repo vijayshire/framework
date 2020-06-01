@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="105924" started-at="2019-09-09T17:58:46Z" finished-at="2019-09-09T18:00:31Z">
+  <suite name="Default suite" duration-ms="81590" started-at="2020-05-31T04:56:19Z" finished-at="2020-05-31T04:57:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="105924" started-at="2019-09-09T17:58:46Z" finished-at="2019-09-09T18:00:31Z">
+    <test name="Default test" duration-ms="81590" started-at="2020-05-31T04:56:19Z" finished-at="2020-05-31T04:57:40Z">
       <class name="testCases.CheCkLogin">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="setUp" is-config="true" duration-ms="63270" started-at="2019-09-09T17:59:17Z" finished-at="2019-09-09T18:00:20Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="setUp" is-config="true" duration-ms="25451" started-at="2020-05-31T04:56:19Z" finished-at="2020-05-31T04:56:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="login" duration-ms="3029" started-at="2019-09-09T18:00:20Z" data-provider="login" finished-at="2019-09-09T18:00:23Z">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="login" duration-ms="12433" started-at="2020-05-31T04:56:50Z" data-provider="login" finished-at="2020-05-31T04:57:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[9158833338]]>
+                <![CDATA[user1]]>
               </value>
             </param>
             <param index="1">
@@ -27,11 +27,71 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="clear" is-config="true" duration-ms="8454" started-at="2019-09-09T18:00:23Z" finished-at="2019-09-09T18:00:31Z">
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="clear" is-config="true" duration-ms="1" started-at="2020-05-31T04:57:03Z" finished-at="2020-05-31T04:57:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clear -->
-        <test-method status="PASS" signature="flush()[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="flush" is-config="true" duration-ms="0" started-at="2019-09-09T18:00:31Z" finished-at="2019-09-09T18:00:31Z">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="login" duration-ms="10757" started-at="2020-05-31T04:57:03Z" data-provider="login" finished-at="2020-05-31T04:57:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[gdsgs]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="login" duration-ms="10979" started-at="2020-05-31T04:57:13Z" data-provider="login" finished-at="2020-05-31T04:57:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Successive1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="clear" is-config="true" duration-ms="0" started-at="2020-05-31T04:57:13Z" finished-at="2020-05-31T04:57:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clear -->
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="clear" is-config="true" duration-ms="0" started-at="2020-05-31T04:57:24Z" finished-at="2020-05-31T04:57:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clear -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="login" duration-ms="10975" started-at="2020-05-31T04:57:24Z" data-provider="login" finished-at="2020-05-31T04:57:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Successive1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="clear()[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="clear" is-config="true" duration-ms="0" started-at="2020-05-31T04:57:35Z" finished-at="2020-05-31T04:57:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clear -->
+        <test-method status="PASS" signature="flush()[pri:0, instance:testCases.CheCkLogin@37374a5e]" name="flush" is-config="true" duration-ms="4886" started-at="2020-05-31T04:57:35Z" finished-at="2020-05-31T04:57:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flush -->
